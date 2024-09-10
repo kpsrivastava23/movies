@@ -28,7 +28,7 @@ const Lists = () => {
     useEffect(() => {
         const getData = async () => {
             try {    
-                const response = await fetch(`http://localhost:3001/showUserlist`, {
+                const response = await fetch(`https://movies-1-ngpz.onrender.com/showUserlist`, {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json',
@@ -41,7 +41,7 @@ const Lists = () => {
                 const data = await response.json();
                 const list_ids = data[0].list_id;
                 const saveListPromises = list_ids.map(async (lid)=>{
-                    const response = await fetch(`http://localhost:3001/showlist`, {
+                    const response = await fetch(`https://movies-1-ngpz.onrender.com/showlist`, {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json',
@@ -86,7 +86,7 @@ const Lists = () => {
     const addtoList = async () => {
         const datatoAdd = {listID : confirm, movie : movdata.id}
         try {
-            const response = await fetch(`http://localhost:3001/addtolist`, {
+            const response = await fetch(`https://movies-1-ngpz.onrender.com/addtolist`, {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json',
@@ -110,7 +110,7 @@ const Lists = () => {
     const handleAddSubmit = async () => {
         console.log("AARARarrarara");
         try {
-            const response = await fetch(`http://localhost:3001/addlist`, {
+            const response = await fetch(`https://movies-1-ngpz.onrender.com/addlist`, {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json',

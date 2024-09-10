@@ -1,6 +1,6 @@
 export const getRatedMovies = async (email) => {
     try {
-      const response = await fetch('http://localhost:3001/user/watchedmovies', {
+      const response = await fetch('https://movies-1-ngpz.onrender.com/user/watchedmovies', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

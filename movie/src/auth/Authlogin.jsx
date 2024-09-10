@@ -11,7 +11,7 @@ const Authlogin = () => {
         async function sendData(data)
         {
             try{
-                const response = await fetch('http://localhost:3001/login', {
+                const response = await fetch('https://movies-1-ngpz.onrender.com/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json',

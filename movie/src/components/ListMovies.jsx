@@ -12,7 +12,7 @@ const ListMovies = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/show/listMovies`, {
+      const response = await fetch(`https://movies-1-ngpz.onrender.com/show/listMovies`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

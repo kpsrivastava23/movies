@@ -10,7 +10,7 @@ const StarRating = ({ user, movie }) => {
     useEffect(() => {
         async function addingRating() {
             try {
-                const response = await fetch(`http://localhost:3001/addRating`, {
+                const response = await fetch(`https://movies-1-ngpz.onrender.com/addRating`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const StarRating = ({ user, movie }) => {
     useEffect(() => {
         async function showRating() {
             try {
-                const response = await fetch(`http://localhost:3001/showRating`, {
+                const response = await fetch(`https://movies-1-ngpz.onrender.com/showRating`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

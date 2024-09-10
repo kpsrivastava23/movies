@@ -33,7 +33,7 @@ const UserWishlist = () => {
     if (!user) return;
     
     try {
-      const response = await fetch(`http://localhost:3001/showWishlist`, {
+      const response = await fetch(`https://movies-1-ngpz.onrender.com/showWishlist`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const UserWishlist = () => {
 
   const removeFromWishlist = async (movieId) => {
     try {
-      const response = await fetch('http://localhost:3001/removeWishlist', {
+      const response = await fetch('https://movies-1-ngpz.onrender.com/removeWishlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
