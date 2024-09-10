@@ -9,8 +9,8 @@ import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <Auth0Provider
-        domain="dev-58sfvybftbuxma56.us.auth0.com"
-        clientId="JReTOzafMs81N62KvktD42Ixb0wi5XwA"
+        domain="dev-rq0x1so2hesk4sy1.us.auth0.com"
+        clientId="StleRL6bpoYn2iQCSTZOS3IWRBJnDNRl"
         authorizationParams={{
         redirect_uri: 'https://movies-2-t3a2.onrender.com/auth/login'
         }}
