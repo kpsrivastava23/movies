@@ -9,8 +9,7 @@
   "prebuild": "npm install",
   "build": "vite build"
 }
-
-    },
+,
     "author": "",
     "license": "ISC",
     "dependencies": {
