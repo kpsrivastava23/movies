@@ -10,7 +10,7 @@ const StarRating = ({ user, movie }) => {
     useEffect(() => {
         async function addingRating() {
             try {
-                const response = await fetch(`https://movies-1-ngpz.onrender.com/addRating`, {
+                const response = await fetch(`https://movie-mw05pa2fz-kshitij-prakashs-projects.vercel.app/addRating`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

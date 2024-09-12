@@ -32,34 +32,32 @@ app.post('/', (req, res) => {
     res.send('Welcome to the Movies API! Hey');
 });
 app.post('/login', midlogin, async (req, res) => {
-    console.log(req.body);
-    console.log("gadbad h");
-    try{
-        const responsed = await Profile.find({ email: req.body.email}).exec();
-        if (responsed.length > 0)
-            return res.send({message: 'Already registered'});
-    }
-    catch(error)
-    {
-        console.log("some error occurred here");
-    }
-    const newData = new Profile({
-        name: req.body.name,
-        email: req.body.email,
-        gauth: req.body.sub,
-        picture: req.body.picture,
-      });
-      
-      newData.save()
-        .then((savedData) => {
-          console.log('Data saved successfully:', savedData);
-        })
-        .catch((error) => {
-          console.error('Error saving data:', error);
+    console.log('Request Body:', req.body);
+
+    try {
+        const responsed = await Profile.find({ email: req.body.email }).exec();
+        if (responsed.length > 0) {
+            console.log('User already registered:', req.body.email);
+            return res.json({ message: 'Already registered' });
+        }
+        
+        const newData = new Profile({
+            name: req.body.name,
+            email: req.body.email,
+            gauth: req.body.sub,
+            picture: req.body.picture,
         });
-    const data = { message: 'Saved on the database' };
-    res.json(data);   
-})
+
+        await newData.save();
+        console.log('Data saved successfully:', newData);
+        res.json({ message: 'Saved on the database' });
+
+    } catch (error) {
+        console.error('Error:', error.message);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 
 app.post('/addRating', async (req, res) => {
     const { email, movie_ID, rating } = req.body;

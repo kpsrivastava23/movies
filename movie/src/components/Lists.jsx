@@ -86,7 +86,7 @@ const Lists = () => {
     const addtoList = async () => {
         const datatoAdd = {listID : confirm, movie : movdata.id}
         try {
-            const response = await fetch(`https://movies-1-ngpz.onrender.com/addtolist`, {
+            const response = await fetch(`https://movie-mw05pa2fz-kshitij-prakashs-projects.vercel.app/addtolist`, {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json',

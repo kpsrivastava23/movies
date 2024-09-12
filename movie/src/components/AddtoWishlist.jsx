@@ -7,7 +7,7 @@ const AddtoWishlist = ({ user, data }) => {
     console.log(user);
   const sendData = async (user) => {
     try {
-      const response = await fetch('https://movies-1-ngpz.onrender.com/addWishlist', {
+      const response = await fetch('https://movie-mw05pa2fz-kshitij-prakashs-projects.vercel.app/addWishlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
