@@ -11,9 +11,15 @@ const UserLists = require('./database/UserLists')
 const WatchedMovies = require('./database/WatchedMovies')
 const OpenAI = require('openai');
 
-app.use(cors())
-app.use(express.json());
 
+app.use(express.json());
+const corsOptions = {
+    origin: 'https://movies-2-t3a2.onrender.com', // Replace with your frontend URL
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  };
+  
+  app.use(cors(corsOptions));
 connectt();
 
 function midlogin(req, res, next){
