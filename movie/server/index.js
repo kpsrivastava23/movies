@@ -28,6 +28,9 @@ function midlogin(req, res, next){
 app.get('/', (req, res) => {
     res.send('Welcome to the Movies API! Hey');
 });
+app.get('/login', (req, res) => {
+    res.send('helo');
+});
 app.post('/', (req, res) => {
     res.send('Welcome to the Movies API! Hey');
 });
@@ -58,6 +61,9 @@ app.post('/login', midlogin, async (req, res) => {
     }
 });
 
+app.post('/test', (req, res) => {
+    res.send('POST test route is working!');
+});
 
 app.post('/addRating', async (req, res) => {
     const { email, movie_ID, rating } = req.body;

@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Check />} />  {/*temporary*/}
         <Route path="/auth/login" element={<Authlogin />} />
-        <Route path="https://movies-2-t3a2.onrender.com/auth/login" element={<Authlogin />} />
+       
         <Route path="/user/profile" element={<Profile />} />
         <Route path="/user/Wishlist" element={<UserWishlist />} />
         <Route path="/user/List" element={<Userlist />} />

@@ -13,7 +13,7 @@ const Authlogin = () => {
         if (isAuthenticated && user) {
             async function sendData(data) {
                 try {
-                    const response = await fetch('https://movie-mw05pa2fz-kshitij-prakashs-projects.vercel.app/login', {
+                    const response = await fetch('https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/login', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
