@@ -11,7 +11,7 @@ const UserLists = require('./database/UserLists')
 const WatchedMovies = require('./database/WatchedMovies')
 const OpenAI = require('openai');
 
-app.use(cors({ origin: 'https://movies-2-t3a2.onrender.com' }));
+app.use(cors())
 app.use(express.json());
 
 connectt();
