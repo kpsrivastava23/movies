@@ -19,7 +19,9 @@ connectt();
 function midlogin(req, res, next){
     next();
 }
-
+app.get('/', (req, res) => {
+    res.send('Welcome to the Movies API!');
+});
 app.post('/login', midlogin, async (req, res) => {
     //console.log(req.body);
     try{
