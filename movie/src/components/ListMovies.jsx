@@ -12,7 +12,7 @@ const ListMovies = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch(`https://movie-mw05pa2fz-kshitij-prakashs-projects.vercel.app/show/listMovies`, {
+      const response = await fetch(`https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/show/listMovies`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
