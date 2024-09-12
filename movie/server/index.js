@@ -22,6 +22,9 @@ function midlogin(req, res, next){
 app.get('/', (req, res) => {
     res.send('Welcome to the Movies API! Hey');
 });
+app.post('/', (req, res) => {
+    res.send('Welcome to the Movies API! Hey');
+});
 app.post('/login', midlogin, async (req, res) => {
     //console.log(req.body);
     try{
