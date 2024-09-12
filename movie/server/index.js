@@ -26,7 +26,8 @@ app.post('/', (req, res) => {
     res.send('Welcome to the Movies API! Hey');
 });
 app.post('/login', midlogin, async (req, res) => {
-    //console.log(req.body);
+    console.log(req.body);
+    console.log("gadbad h");
     try{
         const responsed = await Profile.find({ email: req.body.email}).exec();
         if (responsed.length > 0)
