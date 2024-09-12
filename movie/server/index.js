@@ -302,6 +302,10 @@ app.post('/user/watchedmovies', async(req, res) => {
     }
 })
 
-app.listen(3001, ()=>{
-    console.log("Port is running");
-})
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
+
+
