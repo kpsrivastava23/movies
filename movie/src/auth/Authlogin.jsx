@@ -13,7 +13,7 @@ const Authlogin = () => {
         if (isAuthenticated && user) {
             async function sendData(data) {
                 try {
-                    const response = await fetch('https://movies-1-ngpz.onrender.com/login', {
+                    const response = await fetch('https://movies-1-ngpz.onrender.com/auth/login', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
