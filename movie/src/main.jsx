@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             domain="dev-rq0x1so2hesk4sy1.us.auth0.com"
         clientId="StleRL6bpoYn2iQCSTZOS3IWRBJnDNRl"
             authorizationParams={{
-                redirect_uri: 'https://frontendmovie-hum3m0i29-kshitij-prakashs-projects.vercel.app/auth/login'
+                redirect_uri: 'https://movies-2-t3a2.onrender.com/auth/login'
             }}
         >
             <App />
