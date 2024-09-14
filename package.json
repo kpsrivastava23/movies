@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kpsrivastava23.github.io/movies/movie/",
+  
  "scripts": {
   "dev": "vite",
   "client": "vite",
