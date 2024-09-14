@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         domain="dev-58sfvybftbuxma56.us.auth0.com"
         clientId="JReTOzafMs81N62KvktD42Ixb0wi5XwA"
         authorizationParams={{
-        redirect_uri: 'https://kpsrivastava23.github.io/movies/'
+        redirect_uri: 'https://elegant-beignet-38fd81.netlify.app/auth/login'
         }}
     >
         <App />
