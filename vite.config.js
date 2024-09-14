@@ -5,10 +5,10 @@ import tailwindcss from 'tailwindcss';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/movies/movie/',  // Base path for GitHub Pages
+  base: '/movies/',  // Base path for GitHub Pages
   css: {
     postcss: {
       plugins: [tailwindcss()],
     },
-  }
+  },
 });
