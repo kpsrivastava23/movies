@@ -33,7 +33,7 @@ const UserWishlist = () => {
     if (!user) return;
     
     try {
-      const response = await fetch(`https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/showWishlist`, {
+      const response = await fetch(`https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/showWishlist`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const UserWishlist = () => {
 
   const removeFromWishlist = async (movieId) => {
     try {
-      const response = await fetch('hhttps://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/removeWishlist', {
+      const response = await fetch('https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/removeWishlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

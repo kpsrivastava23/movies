@@ -28,7 +28,7 @@ const Lists = () => {
     useEffect(() => {
         const getData = async () => {
             try {    
-                const response = await fetch(`https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/showUserlist`, {
+                const response = await fetch(`https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/showUserlist`, {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json',
@@ -41,7 +41,7 @@ const Lists = () => {
                 const data = await response.json();
                 const list_ids = data[0].list_id;
                 const saveListPromises = list_ids.map(async (lid)=>{
-                    const response = await fetch(`https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/showlist`, {
+                    const response = await fetch(`https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/showlist`, {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json',
@@ -86,7 +86,7 @@ const Lists = () => {
     const addtoList = async () => {
         const datatoAdd = {listID : confirm, movie : movdata.id}
         try {
-            const response = await fetch(`https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/addtolist`, {
+            const response = await fetch(`https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/addtolist`, {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json',
@@ -110,7 +110,7 @@ const Lists = () => {
     const handleAddSubmit = async () => {
         console.log("AARARarrarara");
         try {
-            const response = await fetch(`https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/addlist`, {
+            const response = await fetch(`https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/addlist`, {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json',

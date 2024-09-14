@@ -1,50 +1,45 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import Home from "../components/Home";
 const Authlogin = () => {
-    const { user, isAuthenticated, isLoading } = useAuth0();
     const navigate = useNavigate();
+    const {user} = useAuth0();
     const [logged, setLogged] = useState(false);
-
     useEffect(() => {
-        if (isLoading) return; // Wait until Auth0 has finished loading
-        
-        if (isAuthenticated && user) {
-            async function sendData(data) {
-                try {
-                    const response = await fetch('https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/login', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(data)
-                    });
-                    if (!response.ok) {
-                        throw new Error('Network Response was not ok');
-                    }
-                    setLogged(true);
-                } catch (error) {
-                    console.log('Error sending data', error);
+        console.log(user);
+        async function sendData(data)
+        {
+            try{
+                const response = await fetch('https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type' : 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                if (!response.ok){
+                    throw new Error('Network Response was not ok');
                 }
+                setLogged(true);
             }
+            catch(error)
+            {
+                console.log('Error sending data', error);
+            }
+        }
+        if (user)
+        {
             sendData(user);
         }
-    }, [isAuthenticated, isLoading, user]);
-
-    useEffect(() => {
-        if (logged) {
-            navigate('/', { state: { user: user } });
-        }
-    }, [logged, navigate, user]);
-
-    if (isLoading) return <div>Loading...</div>;
-
-    return (
-        <div>
-            {isAuthenticated ? <div>Welcome, {user.name}</div> : <div>Waiting for login...</div>}
-        </div>
-    );
-};
+        else   
+            console.log("waiting");
+    },[user])
+    return(
+        <>
+            {logged && navigate('/', {state : {user : user}})};
+        </>
+    )
+}
 
 export default Authlogin;

@@ -10,7 +10,7 @@ const StarRating = ({ user, movie }) => {
     useEffect(() => {
         async function addingRating() {
             try {
-                const response = await fetch(`https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/addRating`, {
+                const response = await fetch(`https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/addRating`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const StarRating = ({ user, movie }) => {
     useEffect(() => {
         async function showRating() {
             try {
-                const response = await fetch(`https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/showRating`, {
+                const response = await fetch(`https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/showRating`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

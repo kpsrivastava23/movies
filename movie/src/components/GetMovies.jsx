@@ -38,7 +38,7 @@ const wishandle = (user, data, navigate) => {
 
   const sendData = async (user) => {
     try {
-      const response = await fetch('https://movie-i5c0eaovu-kshitij-prakashs-projects.vercel.app/addWishlist', {
+      const response = await fetch('https://movie-app-backend-2qpbo5eir-kshitij-prakashs-projects.vercel.app/addWishlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
