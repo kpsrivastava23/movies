@@ -3,16 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  
- "scripts": {
-  "dev": "vite",
-  "client": "vite",
-  "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-  "preview": "vite preview",
-  "build": "vite build",
-  "deploy": "npm run build && gh-pages -d dist"
-}
-,
+  "homepage": "https://kpsrivastava23.github.io/movies/",
+  "scripts": {
+    "dev": "vite",
+    "client": "vite",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "build": "vite build",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
     "axios": "^1.7.2",

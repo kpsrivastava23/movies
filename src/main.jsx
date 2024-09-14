@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         domain="dev-58sfvybftbuxma56.us.auth0.com"
         clientId="JReTOzafMs81N62KvktD42Ixb0wi5XwA"
         authorizationParams={{
-        redirect_uri: 'http://localhost:5173/auth/login'
+        redirect_uri: 'https://kpsrivastava23.github.io/movies/'
         }}
     >
         <App />
