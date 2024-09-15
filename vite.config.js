@@ -9,4 +9,8 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
+  server: {
+    port: 5173, // Use PORT environment variable or fallback to 5173
+    host: '0.0.0.0', // Bind to all network interfaces
+  },
 });
